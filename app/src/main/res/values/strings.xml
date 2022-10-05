@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Cadastro De Usuários</string>
+    <string name="hintName">Name</string>
+    <string name="hintEmail">E-mail</string>
+    <string name="hintPassword">Password</string>
+    <string name="switchActive">Active</string>
+</resources>
