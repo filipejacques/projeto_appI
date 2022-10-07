@@ -25,9 +25,10 @@ class AddUserActivity : AppCompatActivity() {
             val confirmacao = binding.edtConfirmacaoDePassword.toString()
             val localizacao  = binding.edtEndereco.toString()
 
-            if (name.isEmpty() || email.isEmpty() || password.isEmpty() ||
+            if (name.isEmpty() || email.isEmpty() || password.isEmpty() ||email.contains("@") ||
+                email.contains(".")||
                 confirmacao.isEmpty() ||localizacao.isEmpty() ||
-                email < "8" || password < "8" ) {
+                email.length < 8  || password.length < 8 ) {
                 Snackbar.make(view, "Preencha todos os campos do formulário", Snackbar.LENGTH_LONG)
                     .show()
             } else {

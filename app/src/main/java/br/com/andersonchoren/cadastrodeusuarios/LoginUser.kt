@@ -23,20 +23,20 @@ class LoginUser : AppCompatActivity() {
             val name = binding.edtName.text.toString()
             val email = binding.edtEmail.text.toString()
             val password = binding.edtPassword.text.toString()
-            val localizacao = binding.edtlocal.toString()
+
 
             if (name.isEmpty() || email.isEmpty() || password.isEmpty() ||
-               localizacao.isEmpty() ||
-                email < "8" || password < "8" || name != name || email != email || password != password  ) {
+               email.length < 8 || password.length < 8 || email.contains("@") || email.contains(".") ||name != name || email != email ||
+                password != password  ) {
                 Snackbar.make(view, "Preencha todos os campos do formulário", Snackbar.LENGTH_LONG)
                     .show()
-        }
-        binding.fabCompras.setOnClickListener {
-            val intent2 = Intent(applicationContext, compras::class.java)
-            startActivity(intent2)
+        }else {
+                binding.fabCompras.setOnClickListener {
+                    val intent2 = Intent(applicationContext, compras::class.java)
+                    startActivity(intent2)
 
-        }
-
+                }
+            }
 
     }
 

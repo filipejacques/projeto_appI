@@ -14,6 +14,7 @@ class APPDatabase(context:Context) : SQLiteOpenHelper(context,DATABASE_NAME,null
         if( db != null){
             val sql = "CREATE TABLE users(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT, email TEXT, password TEXT, isActive INTEGER)"
             db.execSQL(sql)
+            //db.insert("users",)
         }
     }
 

@@ -7,44 +7,133 @@
     tools:context=".compras">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="120dp"
-        android:layout_height="92dp"
+        android:id="@+id/imgRX"
+        android:layout_width="113dp"
+        android:layout_height="99dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        app:srcCompat="@drawable/rx" />
+
+    <CheckBox
+        android:id="@+id/cbRX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="CheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgRX" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="138dp"
-        android:layout_height="92dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:id="@+id/imgSSD"
+        android:layout_width="112dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imgRX"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        app:srcCompat="@drawable/ssd" />
 
-    <RadioButton
-        android:id="@+id/rbCompra"
+    <CheckBox
+        android:id="@+id/cbSSD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="16dp"
-        android:text="RadioButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:text="CheckBox"
+        app:layout_constraintStart_toEndOf="@+id/cbRX"
+        app:layout_constraintTop_toBottomOf="@+id/imgSSD" />
 
-    <RadioButton
-        android:id="@+id/radioButton4"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabFinalizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="70dp"
-        android:text="RadioButton"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:srcCompat="@drawable/shop" />
+
+    <ImageView
+        android:id="@+id/imgArmario"
+        android:layout_width="113dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbRX"
+        app:srcCompat="@drawable/armario" />
+
+    <ImageView
+        android:id="@+id/emgChinelo"
+        android:layout_width="113dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgArmario"
+        app:layout_constraintTop_toBottomOf="@+id/cbSSD"
+        app:srcCompat="@drawable/chinelo" />
+
+    <CheckBox
+        android:id="@+id/cbArmario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="CheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgArmario" />
+
+    <CheckBox
+        android:id="@+id/cbChinelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:text="CheckBox"
+        app:layout_constraintStart_toEndOf="@+id/cbArmario"
+        app:layout_constraintTop_toBottomOf="@+id/emgChinelo" />
+
+    <ImageButton
+        android:id="@+id/imgCasinha"
+        android:layout_width="113dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbArmario"
+        app:srcCompat="@drawable/casinha" />
+
+    <ImageButton
+        android:id="@+id/imgCimento"
+        android:layout_width="113dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgCasinha"
+        app:layout_constraintTop_toBottomOf="@+id/cbChinelo"
+        app:srcCompat="@drawable/cimento" />
+
+    <CheckBox
+        android:id="@+id/cbCasinha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="CheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCasinha" />
+
+    <CheckBox
+        android:id="@+id/cbCimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:text="CheckBox"
+        app:layout_constraintStart_toEndOf="@+id/cbCasinha"
+        app:layout_constraintTop_toBottomOf="@+id/imgCimento" />
 </androidx.constraintlayout.widget.ConstraintLayout>
